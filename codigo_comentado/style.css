@@ -1,0 +1,267 @@
+:root{
+    --primary-color: #321f28;
+    --secondary-color: #734046;
+    --tertiary-color: #a05344;
+    --quaternary-color: #e79e4f;
+    --title-size: 4rem;
+    --subtitle-size: 2.2rem;
+    --body-size: 1.8rem;
+    --small-text-size: 1.4rem; 
+}
+/* Establezco variables para utilizarlas mas adelante en la pagina web */
+*{
+    box-sizing: border-box;
+    /* Border box permite que el contenido de la pagina se acople a la medida de la ventana que la contiene*/
+    margin: 0;
+    /* Sobreescribir los valores originales de margin y padding a 0 permite hacer calculos sin errores de distribucion de pantalla*/
+    padding: 0;
+}
+/* Escribo el selector universal para indicar margin, padding y box-sizing, todos estos puntos de buena practica en CSS */
+
+
+html{
+    font-size: 62.5%;
+}
+/* Escribo el selector html para establecer el tamano root en 10px. Esto facilita los calculos de las medidas en rem */
+
+.header-logo{
+    height: 15rem;
+}
+/* Establezco un tamano limite del contenedor. Esto me facilitara el recortar la imagen de fondo */
+
+.header-logo-title{
+    position: absolute;
+    /* Permite encimar elementos y controlar en su totalidad la posicion */
+    color: white;
+    /* Color de letra a blanco */
+    display: inline-block;
+    /* Permite establecer medidas de padding en la figura, a la vez que colocar contenido en la misma linea que el elemento seleccionado */
+    font-size: 5rem;
+    /* Tamano de letra a 50px */
+    text-align: center;
+    /* Alineacion de texto en el centro */
+    width: 100%;
+    /* Ancho del elemento se igualara al ancho de toda la pantalla */
+    margin-top: 3rem;
+    /* establezco un margen de 30px */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* Cambio de la fuente de letra a Georgia */
+}
+
+
+.header-logo-title a{
+    color: white;
+    text-decoration: none;
+    /* Sobreescribo el subrayado de texto y el color morado que tienen los hiperenlaces para permitir establecer un boton mas discreto*/
+}
+
+
+.header-logo-figure{
+    width: 100%;
+    /* Indico al contenedor de la imagen que se acople al tamano completo de la ventana */
+        
+
+}
+
+.header-logo-img{
+    width: 100%;
+    /* Indico a la imagen que se acople al tamano completo de su contenedor */
+    object-fit: none;    
+    /* Permito el recorte de la imagen segun una medida establecida */
+    height: 15rem;    
+    /* Establezco la medida a la que se recortara. En este caso, la medida de su altura */
+}
+
+.header-main-nav{
+    display: flex;
+    /* Establezco una forma de interaccion entre los elementos contenidos en esta etiqueta. Esta etiqueta permtira mejor interaccion con las caracteristicas de la ventana */
+    justify-content: center;
+    /* Indico al contenedor que coloque sus elementos contenidos en el centro de la ventana */
+    font-size: var(--subtitle-size);
+    /* Establezco un tamano de letra a los elementos de la barra de navegacion y lo igualo a una variable preestablecida en las primeras lineas de codigo (esto ayuda a ahorrar codigo, disminuir los errores y eficientar la escritura de codigo) */
+
+}
+
+.header-main-nav__list{
+    list-style: none;
+    /* Quito los bullets de la lista */
+    margin: 1rem;
+    /* Establezco un margen en todo alrededor de cada elemento de la lista de 10px */
+}
+
+.header-main-nav__item{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    /* Establezco un color de fondo de un color preestablecido como una variable */
+    border-radius: 2rem;
+    /* Redondeo los bordes del elemento */
+}
+.header-main-nav__item a{
+    text-decoration: none;
+    color: white;
+}
+
+.header-sec-nav{
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: right;
+
+}
+
+.header-sec-nav__list{
+    list-style: none;
+    margin: 1rem;
+}
+
+.header-sec-nav__item{
+    display: inline-block;
+    background-color: var(--tertiary-color);
+    padding: 1rem 2rem;
+    font-size: var(--body-size);
+    border-radius: 0.5rem;
+}
+
+.header-sec-nav__item a{
+    text-decoration: none;    
+    color: white;
+}
+
+#reserve-now-button{
+    background-color: var(--quaternary-color);
+    font-size: var(--subtitle-size);    
+    border-radius: 2rem;
+
+}
+
+.main-content{
+    margin-top: 1rem;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fbf2e9;
+    padding: 5rem;
+    border-radius: 1rem;
+}
+
+.main-habitaciones{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.main-img{
+    width: 45%;
+}
+
+.main-img img{
+    width: 100%;
+}
+
+.main-img figcaption{
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.main-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.galeria-img{
+    width: 30%;
+    
+}
+
+.galeria-img img{
+    width: 100%;
+    object-fit: cover;
+    height: 20rem;
+}
+
+.title{
+    font-size: var(--title-size);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.subtitle{
+    font-size: var(--subtitle-size);
+    margin: 2rem;
+    color: var(--secondary-color);
+}
+
+.main-body{
+    font-size: var(--body-size);
+}
+
+.main-list__item, .distancias__item, .main-tarifas__item, .main-telefonos__item{
+    font-size: var(--body-size);
+    margin-left: 5rem;
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--quaternary-color);
+    border-radius: 2rem;
+}
+
+.main-footer{
+    text-align: center;
+    display: flex;
+}
+
+.main-footer__section{
+    width: 30%;
+    margin-bottom: 3rem;
+    margin: auto auto;
+}
+
+.footer-title{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 3rem;
+    color: var(--tertiary-color);
+}
+
+.footer-subtitle{
+    font-size: var(--subtitle-size);
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.footer-body{
+    font-size: var(--body-size);
+}
+
+.footer-copyright{
+    margin-left: 5rem;
+    font-size: var(--small-text-size);
+    margin-top: 5rem;
+}
+
+.footer-social-media{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-media__list{
+    list-style: none;
+}
+
+.footer-social-media__item{
+    display: inline-block;
+    background-color: var(--tertiary-color);
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    font-size: var(--subtitle-size);
+    margin-bottom: 5rem;
+}
+
+.footer-social-media__item a{
+    color: white;
+    text-decoration: none;
+}

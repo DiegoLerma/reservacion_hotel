@@ -1,0 +1,266 @@
+:root{
+    --primary-color: #321f28;
+    --secondary-color: #734046;
+    --tertiary-color: #a05344;
+    --quaternary-color: #e79e4f;
+    --title-size: 4rem;
+    --subtitle-size: 2.2rem;
+    --subtitle-span-size: 2rem;
+    --body-size: 1.8rem;
+    --small-text-size: 1.4rem; 
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+.header-logo{
+    height: 15rem;
+}
+
+.header-logo-title{
+    position: absolute;
+    color: white;
+    display: inline-block;
+    font-size: 5rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header-logo-title a{
+    color: white;
+    text-decoration: none;
+}
+
+.header-logo-figure{
+    width: 100%;    
+
+}
+
+.header-logo-img{
+    width: 100%;
+    object-fit: none;    
+    height: 15rem;    
+}
+
+.header-main-nav{
+    display: flex;
+    justify-content: center;
+    font-size: var(--subtitle-size);
+
+}
+
+.header-main-nav__list{
+    list-style: none;
+    margin: 1rem;
+}
+
+.header-main-nav__item{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+}
+.header-main-nav__item a{
+    text-decoration: none;
+    color: white;
+}
+
+.header-sec-nav{
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: right;
+
+}
+
+.header-sec-nav__list{
+    list-style: none;
+    margin: 1rem;
+}
+
+.header-sec-nav__item{
+    display: inline-block;
+    background-color: var(--tertiary-color);
+    padding: 1rem 2rem;
+    font-size: var(--body-size);
+    border-radius: 0.5rem;
+}
+
+.header-sec-nav__item a{
+    text-decoration: none;    
+    color: white;
+}
+
+#reserve-now-button{
+    background-color: var(--quaternary-color);
+    font-size: var(--subtitle-size);    
+    border-radius: 2rem;
+
+}
+
+.covid-info{
+    background-color: var(--quaternary-color);
+    text-align: center;
+    padding: 1rem;    
+    border-radius: 5rem;
+    margin-bottom: 3rem;
+}
+
+.covid-info a{
+    font-size: var(--subtitle-size);
+    text-decoration: none;
+    color: white;
+}
+
+.main-content{
+    margin-top: 1rem;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fbf2e9;
+    padding: 5rem;
+    border-radius: 1rem;    
+}
+.title{
+    font-size: var(--title-size);
+    color: var(--primary-color);
+}
+
+.arrival-section{
+    display: block;
+    text-align: center;
+}
+
+.main-img{
+    display: inline-block;
+    width: 45%;
+}
+
+.main-img img{
+    width: 100%;
+}
+
+.main-img figcaption{
+    font-size: var(--subtitle-size);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--tertiary-color);
+    text-align: center;
+}
+
+.main-img h2{
+    font-size: var(--subtitle-size);
+    display: inline-block;
+}
+
+.main-img span{
+    font-size: var(--subtitle-span-size);
+    display: inline-block;
+}
+
+.main-body{
+    font-size: var(--body-size);
+    margin-bottom: 2rem;
+}
+
+.reservation__section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.main-img input{
+    display: block;
+}
+
+.subtitle-arrival{
+    font-size: var(--subtitle-size);
+    padding: 0.5rem;
+}
+
+.complete-room-selection__button{
+    font-size: var(--subtitle-size);
+    background-color: var(--quaternary-color);
+    margin-top: 3rem;
+    padding: 1rem;
+    display: block;
+    margin: 3rem auto;
+}
+
+.complete-room-selection__button a{
+    text-decoration: none;
+    color: white;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--quaternary-color);
+    border-radius: 2rem;
+}
+
+.main-footer{
+    text-align: center;
+    display: flex;
+}
+
+.main-footer__section{
+    width: 30%;
+    margin-bottom: 3rem;
+    margin: auto auto;
+}
+
+.footer-title{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 3rem;
+    color: var(--tertiary-color);
+}
+
+.footer-subtitle{
+    font-size: var(--subtitle-size);
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.footer-body{
+    font-size: var(--body-size);
+}
+
+.footer-copyright{
+    margin-left: 5rem;
+    font-size: var(--small-text-size);
+    margin-top: 5rem;
+}
+
+.footer-social-media{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-media__list{
+    list-style: none;
+}
+
+.footer-social-media__item{
+    display: inline-block;
+    background-color: var(--tertiary-color);
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    font-size: var(--subtitle-size);
+    margin-bottom: 5rem;
+}
+
+.footer-social-media__item a{
+    color: white;
+    text-decoration: none;
+}

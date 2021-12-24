@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!-- La totalidad del codigo head es identico en los tres documentos de HTML -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones | Hotel Lerma</title>
+    <meta name="description" content="Pintoresco hotel colonial en la ciudad de Guanajuato, Guanajuato. Lugar con un alto valor histórico. Para nosotros, lo más importante es su comodidad. Contamos con un alto nivel de sanidad y medidas claras para combatir la propagación de la actual pandemia por COVID-19" />
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="./reservacion.css">
+    <link rel="shortcut icon" href="./hotel.png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-logo">
+            <h1 class="header-logo-title"><a href="index.html">HOTEL LERMA</a></h1>
+            <div class="header-sec-nav" id="sec-nav">
+                <nav>
+                    <ul class="header-sec-nav__list">
+                        <li class="header-sec-nav__item"><a href="">Idioma</a></li>
+                        <li class="header-sec-nav__item"><a href="">Teléfono</a> </li>
+                        <li class="header-sec-nav__item" id="reserve-now-button"><a href="reservacion.html">Reservar ahora</a> </li>
+                    </ul>
+                </nav>
+            </div>
+            <figure class="header-logo-figure">
+                <picture >
+                    <source media="(min-width: 1300px)" srcset="./hotel-large.jpg">
+                    <source media="(min-width: 1000px)" srcset="./hotel-medium.jpg">
+                    <img class="header-logo-img" src="./hotel-small.jpg" alt="">
+                </picture>
+            </figure>
+        </div>
+        <div class="header-main-nav">
+            <nav>
+                <ul class="header-main-nav__list">
+                    <li class="header-main-nav__item"><a href="">Inicio</a></li>
+                    <li class="header-main-nav__item"><a href="">Habitaciones</a></li>
+                    <li class="header-main-nav__item"><a href="">Galería de fotos</a></li>
+                    <li class="header-main-nav__item"><a href="">Atracciones</a></li>
+                    <li class="header-main-nav__item"><a href="">Contáctenos</a></li>
+                    <li class="header-main-nav__item"><a href="">Más</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main class="main-content">
+        <section class="covid-info">
+        <!-- Anado un hiperenlace a informacion sobre el COVID-19, como es estandar en este tipo de servicios de hoteleria y restaurante actualmente -->
+            <p class="main-body"><a href="">Ayuda relacionada con el coronavirus (COVID-19)</a></p>
+        </section>
+        
+        <section class="arrival-section">
+            <!-- Establezco un sections como etiquetas contenedoras para usar display flex en CSS -->
+            <h1 class="title">Seleccione su tipo de habitación</h1>
+            <label for="fecha_llegada">
+            <!-- Indico la creacion de etiquetas de tipo Date para que el usuario ingrese fecha de llegada y de partida -->
+            <!-- Uso span para anadir el texto explicativo al usuario de que se le esta pidiendo que ingrese -->
+                <span class="subtitle-arrival">Llegada</span>
+                <input type="date" name="fecha_llegada" id="fecha_llegada" required>
+            </label>
+            <label for="fecha_salida">
+                <span class="subtitle-arrival">Salida</span>
+                <input type="date" name="fecha_salida" id="fecha_salida" required>
+            </label>
+        </section>
+        <section class="habitation-table__section">
+        <!-- Establezco una seccion que contenga la tabla, un elemento solicitado en la actividad de la IEU -->
+            <table class="habitation-table__table">
+
+                <tr>
+                    <!-- Indico el primer table row para la tabla -->
+              
+                  <th>Tipo habitación</th>
+                  <!-- Indico los header de mi tabla con th-->
+              
+                  <th>Ocupacion máxima</th>
+              
+                  <th>Precio aprox/noche</th>
+              
+                </tr>
+              
+                <tr>
+              
+                  <td>Sencilla int</td>
+                  <!-- La siguiente informacion en la tabla se indica con td, , es decir table data elements -->
+              
+                  <td>2</td>
+              
+                  <td>1572</td>
+              
+                </tr>
+              
+                <tr>
+              
+                  <td>Sencilla balcón</td>
+                  <!-- Sigo la misma secuencia para la totalidad de la tabla -->
+              
+                  <td>2</td>
+              
+                  <td>1858</td>
+              
+                </tr>
+              
+                <tr>
+              
+                  <td>Doble</td>
+              
+                  <td>4</td>
+              
+                  <td>2143</td>
+              
+                </tr>
+                <tr>
+              
+                    <td>Suite familiar</td>
+                
+                    <td>6</td>
+                
+                    <td>3429</td>
+                
+                  </tr>
+                  <tr>
+              
+                    <td>Penthouse</td>
+                
+                    <td>8</td>
+                
+                    <td>4000</td>
+                
+                  </tr>
+              
+              </table>
+              <!-- Cierro la etiqueta contenedora Table -->
+
+        </section>
+        <section class="reservation__section">
+            <!-- Abro una nueva seccion, nuevamente, esto me permitira utilizar display flex en CSS -->
+            <figure class="main-img">
+                <!-- Establezco un contenedor figure. Esto me permitira colocar toda la informacion concerniente a cada habitacion con una guia visual para el usuario
+                A su vez, establezco aqui mismo un selector datalist para que el usuario escriba el numero de personas que ingresaran a la habitacion, asi como el numero de habitaciones
+            a reservar -->
+                <figcaption class="subtitle">Sencilla interior</figcaption>
+                <img src="./sencilla-interior.jpg" alt="">
+                <h2 class="subtitle">Ocupación máxima</h2>
+                <p class="main-body">2</p>
+                <span class="subtitle">Adultos</span>
+                    <input list="adultos-sencilla-int">
+                
+                <datalist id="adultos-sencilla-int">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- En la habitacion sencilla, se permite un maximo de 2 adultos. -->
+                </datalist>
+                <span class="subtitle">Niños</span>
+                <input list="niños-sencilla-int">
+                
+                <datalist id="niños-sencilla-int">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <!-- Sin embargo, se permite un numero maximo de ninos de 1, puesto que estos deben estar acompanados de un adulto -->
+                </datalist>
+                <span class="subtitle">Habitación(es)</span>
+                <input list="habitaciones-sencilla-int">
+                <datalist id="habitaciones-sencilla-int">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <!-- El hotel puede admitir cualquier numero de reservas de habitaciones al mismo tiempo. 
+                        Aqui se coloca un maximo de 10 por colocar un numero relativamente alto, aunque podria escalarse 
+                        para permitir la reserva simultanea de mayor numero de habitaciones -->
+                </datalist>
+            </figure>
+            <!-- Se repite el mismo proceso para cada tipo de habitacion, y en funcion de su maximo de huespedes por habitacion -->
+            <figure class="main-img">
+                <figcaption class="subtitle">Sencilla con balcón</figcaption>
+                <img src="./sencilla-balcon.jpg" alt="">
+                <h2 class="subtitle">Ocupación máxima</h2>
+                <p class="main-body">2</p>
+                <span class="subtitle">Adultos</span>
+                <input list="adultos-sencilla-balcon">
+                
+                <datalist id="adultos-sencilla-balcon">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </datalist>
+                <span class="subtitle">Niños</span>
+                <input list="niños-sencilla-balcon">
+                
+                <datalist id="niños-sencilla-balcon">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </datalist>
+                <span class="subtitle">Habitación(es)</span>
+                <input list="habitaciones-sencilla-balcon">
+                
+                <datalist id="habitaciones-sencilla-balcon">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+            </figure>
+            <figure class="main-img">
+                <figcaption class="subtitle">Doble</figcaption>
+                <img src="./doble.jpg" alt="">
+                <h2 class="subtitle">Ocupación máxima</h2>
+                <p class="main-body">4</p>
+                <span class="subtitle">Adultos</span>
+                <input list="adultos-doble">
+                
+                <datalist id="adultos-doble">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </datalist>
+                <span class="subtitle">Niños</span>
+                <input list="niños-doble">
+                
+                <datalist id="niños-doble">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </datalist>
+                <span class="subtitle">Habitación(es)</span>
+                <input list="habitaciones-doble">
+                
+                <datalist id="habitaciones-doble">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+            </figure>
+            <figure class="main-img">
+                <figcaption>Suite Familiar</figcaption>
+                <img src="./suite-familiar.jpg" alt="">
+                <h2 class="subtitle">Ocupación máxima</h2>
+                <p class="main-body">6</p>
+                <span class="subtitle">Adultos</span>
+                <input list="adultos-suite-fam">
+                
+                <datalist id="adultos-suite-fam">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </datalist>
+                <span class="subtitle">Niños</span>
+                <input list="niños-suite-fam">
+                
+                <datalist id="niños-suite-fam">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </datalist>
+                <span class="subtitle">Habitación(es)</span>
+                <input list="habitaciones-suite-fam">
+                
+                <datalist id="habitaciones-suite-fam">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <!-- En este caso, partimos del supuesto con que solo se cuenta con 4 habitaciones suite familiar en el hotel  -->
+                </datalist>
+            </figure>
+            <figure class="main-img">
+                <figcaption class="subtitle">Penthouse</figcaption>
+                <img src="./penthouse.jpg" alt="">
+                <h2 class="subtitle">Ocupación máxima</h2>
+                <p class="main-body">8</p>
+                <span class="subtitle">Adultos</span>
+                <input list="adultos-penthouse">
+                
+                <datalist id="adultos-penthouse">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </datalist>
+                <span class="subtitle">Niños</span>
+                <input list="niños-penthouse">
+                
+                <datalist id="niños-penthouse">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </datalist>
+                <span class="subtitle">Habitación(es)</span>
+                <input list="habitaciones-penthouse">
+                
+                <datalist id="habitaciones-penthouse">
+                    <option value="0"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Del mismo modo, solo s cuenta con 2 habitacion penthouse en el hotel -->
+                </datalist>
+            </figure>
+        </section>
+        <button class="complete-room-selection__button" type="submit"><a href="reservacion2.html">Continuar</a></button>
+        <!-- Al finalizar el cliente la configuracion de sus reservaciones, se procedera a llenar la informacion de pago en otra pagina -->
+
+    </main>
+    <footer>
+        <h1 class="footer-title">Hotel Lerma</h1>
+        <!-- Al igual que el head, el footer de las tres paginas generadas para esta tarea es exactamente igual que los demas -->
+        <div class="main-footer">
+            <section class="main-footer__section">
+                <h2 class="footer-subtitle">Número de teléfono</h2>
+                <p class="footer-body">4737390870</p>
+            </section>
+            <section class="main-footer__section">
+                <h2 class="footer-subtitle">Correo electrónico</h2>
+                <p class="footer-body">administracion@hotellermagto.com.mx</p>
+            </section>
+            <section class="main-footer__section">
+                <h2 class="footer-subtitle">Dirección</h2>
+                <p class="footer-body">16 Jardín de la Unión, Zona Centro, Guanajuato Gto. 36000, Mexico</p>
+            </section>
+        </div>
+        <div class="footer-copyright">
+            <p class="footer-body">Esta página fue realizada con fines educativos. Todos los derechos pertenecen a sus autores originales.</p>
+            <p class="footer-body">Proyecto realizado por Diego Lerma en 2020 para la materia Programación Web.</p>
+        </div>            
+        <h2 class="footer-title">Redes sociales</h2>
+        <div class="footer-social-media">
+            <ul class="footer-social-media__list">
+                <li class="footer-social-media__item"><a href="#">Facebook</a></li>
+                <li class="footer-social-media__item"><a href="#">Instagram</a></li>
+                <li class="footer-social-media__item"><a href="#">Twitter</a></li>
+                <li class="footer-social-media__item"><a href="#">Youtube</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>

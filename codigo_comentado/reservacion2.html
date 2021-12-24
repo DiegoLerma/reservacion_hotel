@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones | Hotel Lerma</title>
+    <meta name="description" content="Pintoresco hotel colonial en la ciudad de Guanajuato, Guanajuato. Lugar con un alto valor histórico. Para nosotros, lo más importante es su comodidad. Contamos con un alto nivel de sanidad y medidas claras para combatir la propagación de la actual pandemia por COVID-19" />
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="./reservacion2.css">
+    <link rel="shortcut icon" href="./hotel.png">
+</head>
+<!-- La totalidad del codigo head es identico en los tres documentos de HTML -->
+
+<body>
+    <header class="main-header">
+        <div class="header-logo">
+            <h1 class="header-logo-title"><a href="index.html">HOTEL LERMA</a></h1>
+            <div class="header-sec-nav" id="sec-nav">
+                <nav>
+                    <ul class="header-sec-nav__list">
+                        <li class="header-sec-nav__item"><a href="">Idioma</a></li>
+                        <li class="header-sec-nav__item"><a href="">Teléfono</a> </li>
+                        <li class="header-sec-nav__item" id="reserve-now-button"><a href="">Reservar ahora</a> </li>
+                    </ul>
+                </nav>
+            </div>
+            <figure class="header-logo-figure">
+                <picture >
+                    <source media="(min-width: 1300px)" srcset="./hotel-large.jpg">
+                    <source media="(min-width: 1000px)" srcset="./hotel-medium.jpg">
+                    <img class="header-logo-img" src="./hotel-small.jpg" alt="">
+                </picture>
+            </figure>
+        </div>
+        <div class="header-main-nav">
+            <nav>
+                <ul class="header-main-nav__list">
+                    <li class="header-main-nav__item"><a href="">Inicio</a></li>
+                    <li class="header-main-nav__item"><a href="">Habitaciones</a></li>
+                    <li class="header-main-nav__item"><a href="">Galería de fotos</a></li>
+                    <li class="header-main-nav__item"><a href="">Atracciones</a></li>
+                    <li class="header-main-nav__item"><a href="">Contáctenos</a></li>
+                    <li class="header-main-nav__item"><a href="">Más</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- El contenido anadido es el referente a los datos de pago de la reservacion -->
+    <main class="main-content">            
+        <h1 class="title">Informacion de contacto</h1>
+        <section class="main-form__section">
+            <label for="primer_nombre">
+                <!-- Para ello, se hace uso de etiquetas label de input
+                y varia entre el tipo de input, asi como el autocomplete y el placeholder -->
+                <span class="main-body">Nombre</span>
+                <input type="text" name="primer_nombre" id="primer_nombre" autocomplete="name" placeholder="Primer Nombre" required>
+            </label>
+            <label for="apellido">
+                <span class="main-body">Apellido</span>
+                <input type="text" name="apellido" id="apellido" autocomplete="additional-name" placeholder="Apellido" required>
+            </label>
+            <label for="email">
+                <span class="main-body">E-mail</span>
+                <input type="email" name="email" id="email" autocomplete="email" placeholder="E-mail" required>
+            </label>
+            <label for="telefono">
+                <span class="main-body">Teléfono</span>
+                <input type="tel" name="telefono" id="telefono" autocomplete="tel" placeholder="Teléfono" required>
+            </label>
+        </section>            
+        <h1 class="title">Opciones de pago</h1>
+        <section class="opc_pago_radio">
+            <form>
+                <fieldset>
+                    <legend class="subtitle">Elija una forma de pago</legend>
+                    <label>
+                        <input type="radio" name="opc_pago" value="tarjeta"> 
+                        <span class="main-body">Tarjeta</span> 
+                    </label>
+                    <label>
+                        <input type="radio" name="opc_pago" value="efectivo"> 
+                        <span class="main-body">Pagar a su llegada</span> 
+                    </label>
+                </fieldset>
+            </form>
+        </section>
+            
+        <section class="main-form__section">
+
+            <label for="num_tarjeta">
+                <span class="main-body">Número de tarjeta</span>
+                <input type="number" name="num_tarjeta" id="num_tarjeta" autocomplete="cc-number" placeholder="Número de la tarjeta" required>
+            </label>
+            <label for="cc_fecha_expiracion">
+                <span class="main-body">Fecha de expiración</span>
+                <input name="cc_fecha_expiracion" id="cc_fecha_expiracion" autocomplete="cc-exp" placeholder="MM/YY" required>
+            </label>
+            <label for="cc_cvv">
+                <span class="main-body">CVV</span>
+                <input name="cc_cvv" id="cc_cvv" autocomplete="cc-csc" placeholder="CVV" required>
+            </label>
+            <label for="cc_nombre">
+                <span class="main-body">Nombre del titular</span>
+                <input type="text" name="cc_nombre" id="cc_nombre" autocomplete="off" placeholder="Nombre en la tarjeta" required>
+            </label>
+        </section>
+        <section class="main-form__section">
+            <label for="accept_terms">
+                <input type="checkbox" name="accept_terminos_condiciones" id="accept_terminos_condiciones" aria-required="true">
+                <span class="accept-terms__span">Estoy de acuerdo con los <a href="#">términos y condiciones del Hotel Lerma</a></span>
+                <button class="complete-reservation-button" type="submit">Completar reservación</button>
+            </label>
+        </section>
+    </main>
+    <footer>
+        <!-- Al igual que los otros, el codigo generado en el footer es igual en las tres paginas generadas -->
+        <h1 class="footer-title">Hotel Lerma</h1>
+        <div class="main-footer">
+            <section class="main-footer__section">
+                <h2 class="footer-subtitle">Número de teléfono</h2>
+                <p class="footer-body">4737390870</p>
+            </section>
+            <section class="main-footer__section">
+                <h2 class="footer-subtitle">Correo electrónico</h2>
+                <p class="footer-body">administracion@hotellermagto.com.mx</p>
+            </section>
+            <section class="main-footer__section">
+                <h2 class="footer-subtitle">Dirección</h2>
+                <p class="footer-body">16 Jardín de la Unión, Zona Centro, Guanajuato Gto. 36000, Mexico</p>
+            </section>
+        </div>
+        <div class="footer-copyright">
+            <p class="footer-body">Esta página fue realizada con fines educativos. Todos los derechos pertenecen a sus autores originales.</p>
+            <p class="footer-body">Proyecto realizado por Diego Lerma en 2020 para la materia Programación Web.</p>
+        </div>            
+        <h2 class="footer-title">Redes sociales</h2>
+        <div class="footer-social-media">
+            <ul class="footer-social-media__list">
+                <li class="footer-social-media__item"><a href="#">Facebook</a></li>
+                <li class="footer-social-media__item"><a href="#">Instagram</a></li>
+                <li class="footer-social-media__item"><a href="#">Twitter</a></li>
+                <li class="footer-social-media__item"><a href="#">Youtube</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
