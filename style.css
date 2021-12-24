@@ -32,8 +32,9 @@ html{
     text-align: center;
     width: 100%;
     margin-top: 3rem;
-    font-family: Verdana;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 .header-logo-title a{
     color: white;
     text-decoration: none;
